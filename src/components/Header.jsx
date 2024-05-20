@@ -19,9 +19,9 @@ export default function Header() {
           <ModeToggle />
           <Link href={"/"}>
             <span className="text-red-500 font-bold bg-white p-2 rounded-lg mr-2">
-              IMDb
+              Justin&rsquo;
             </span>
-            <span className="hidden sm:inline">Clone</span>
+            <span className="hidden sm:inline">Movie</span>
           </Link>
         </div>
       </div>
