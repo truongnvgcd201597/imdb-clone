@@ -3,6 +3,7 @@ import MenuItems from "./MenuItems";
 import { AiFillHome } from "react-icons/ai";
 import { FaInfoCircle } from "react-icons/fa";
 import Link from "next/link";
+import { ModeToggle } from "./ModeToggle";
 
 export default function Header() {
   return (
@@ -14,7 +15,8 @@ export default function Header() {
             <MenuItems title="about" path="/about" Icon={FaInfoCircle} />
           </ul>
         </div>
-        <div className="">
+        <div className="flex items-center justify-around">
+          <ModeToggle />
           <Link href={"/"}>
             <span className="text-red-500 font-bold bg-white p-2 rounded-lg mr-2">
               IMDb
