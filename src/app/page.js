@@ -5,7 +5,6 @@ import MovieItem from "@/components/MovieItem";
 import axiosInstance from "@/http/axios";
 import Error from "./error";
 import Loading from "./feed/loading";
-import Link from "next/link";
 
 export default function Home({ params }) {
   const [movies, setMovies] = useState([]);
@@ -45,11 +44,9 @@ export default function Home({ params }) {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 mt-10 w-11/12 mx-auto">
       {movies.map((movie) => (
-        <Link key={movie.id} href={`/movie/${movie.id}`}>
-          <div key={movie.id} className="aspect-ratio w-full ">
-            <MovieItem movie={movie} />
-          </div>
-        </Link>
+        <div key={movie.id} className="aspect-ratio w-full ">
+          <MovieItem movie={movie} />
+        </div>
       ))}
     </div>
   );
